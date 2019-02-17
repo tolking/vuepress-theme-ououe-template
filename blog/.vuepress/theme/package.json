@@ -1,0 +1,11 @@
+{
+  "name": "vuepress-theme-tolking",
+  "version": "1.0.0",
+  "description": "my blog",
+  "main": "index.js",
+  "author": "tolking <tolking@gmail.com>",
+  "scripts": {
+    "dev": "vuepress dev blog",
+    "build": "vuepress build blog"
+  }
+}

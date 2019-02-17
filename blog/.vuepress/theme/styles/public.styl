@@ -1,0 +1,37 @@
+html {
+  font-size: 20px;
+}
+
+body,
+input,
+textarea,
+button,
+select 
+  font-family -apple-system,BlinkMacSystemFont,Microsoft YaHei,Segoe UI,Roboto,Source Han Sans SC,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neu,PingFang SC,sans-serif
+
+.pointer 
+  cursor pointer
+  user-select none
+
+.inblock 
+  display inline-block
+  vertical-align top
+
+.img 
+  width 100%
+  height 100%
+
+.hidden 
+  opacity 0
+
+.img[lazy=loading],
+.img[lazy=error] 
+  margin auto
+  background url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20viewBox%3D'0%200%2032%2032'%20width%3D'32'%20height%3D'32'%20fill%3D'%23709fe9'%3E%3Cpath%20opacity%3D'.25'%20d%3D'M16%200%20A16%2016%200%200%200%2016%2032%20A16%2016%200%200%200%2016%200%20M16%204%20A12%2012%200%200%201%2016%2028%20A12%2012%200%200%201%2016%204'/%3E%3Cpath%20d%3D'M16%200%20A16%2016%200%200%201%2032%2016%20L28%2016%20A12%2012%200%200%200%2016%204z'%3E%3CanimateTransform%20attributeName%3D'transform'%20type%3D'rotate'%20from%3D'0%2016%2016'%20to%3D'360%2016%2016'%20dur%3D'0.8s'%20repeatCount%3D'indefinite'%20/%3E%3C/path%3E%3C/svg%3E") center/20% no-repeat
+
+/* 主体尺寸 */
+.main 
+  max-width 1200px
+  min-width 15rem
+  margin 0 auto
+  
