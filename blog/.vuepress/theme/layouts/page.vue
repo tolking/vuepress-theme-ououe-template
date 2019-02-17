@@ -7,15 +7,18 @@
       </div>
       <Content/>
     </div>
+    <app-footer></app-footer>
   </section>
 </template>
 
 <script>
 import AppHeader from '../components/Header.vue';
+import AppFooter from '../components/Footer.vue';
 
 export default {
   components: {
-    AppHeader
+    AppHeader,
+    AppFooter
   },
   created() {
     console.log(this.$site);

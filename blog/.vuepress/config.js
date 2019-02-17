@@ -12,15 +12,24 @@ module.exports = {
     }
   },
   themeConfig: {
+    cover: '/cover.jpg',
+    logo: '/logo.png',
     nav: [{
       text: 'Home',
       link: '/'
     }, {
       text: 'Posts',
-      link: '/posts'
-    },{
+      link: '/posts/'
+    }, {
       text: 'About',
       link: '/about.html'
+    }],
+    footer: [{
+      text: 'Latest Posts',
+      link: '/posts/'
+    }, {
+      text: 'Github',
+      link: 'https://github.com/tolking'
     }]
   }
 }

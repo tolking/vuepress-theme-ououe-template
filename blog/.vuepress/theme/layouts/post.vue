@@ -1,26 +1,25 @@
 <template>
   <section>
-    <div class="card">
+    <app-header></app-header>
+    <div class="main card">
       <div class="content-header">
         <h1 class="page-title">{{ $page.title }}</h1>
       </div>
       <Content/>
-      <!-- <div class="content page-nav" v-if="prev || next">
-        <p class="inner">
-          <span v-if="prev" class="prev">←
-            <router-link v-if="prev" class="prev" :to="prev.path">{{ prev.title || prev.path }}</router-link>
-          </span>
-          <span v-if="next" class="next">
-            <router-link v-if="next" :to="next.path">{{ next.title || next.path }}</router-link>→
-          </span>
-        </p>
-      </div> -->
     </div>
+    <app-footer></app-footer>
   </section>
 </template>
 
 <script>
+import AppHeader from '../components/Header.vue';
+import AppFooter from '../components/Footer.vue';
+
 export default {
+  components: {
+    AppHeader,
+    AppFooter
+  },
   name: 'post',
   created() {
     console.log(this.$site);
