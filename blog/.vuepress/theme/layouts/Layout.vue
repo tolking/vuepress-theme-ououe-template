@@ -14,6 +14,7 @@ import AppFooter from '../components/Footer.vue';
 import HeaderCover from '../components/HeaderCover.vue';
 import List from '../components/List.vue';
 
+import { splitPages } from '../lib/util';
 export default {
   name: 'layout',
   components: {
@@ -34,10 +35,13 @@ export default {
       })
     }
   },
-  // created() {
-  //   console.log(this.$site);
-  //   console.log(this.$page);
-  //   console.log(this.$pagination);
-  // }
+  created() {
+    // console.log(this);
+    console.log(this.$site);
+    // console.log(this.$page);
+    // console.log(this.$pagination);
+    
+    // splitPages(this.$site.pages)
+  }
 }
 </script>
