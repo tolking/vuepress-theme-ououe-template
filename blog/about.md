@@ -1,7 +1,6 @@
 ---
 title: 关于我
 lang: zh-CN
-layout: page
 ---
 
 #### 前端程序猿

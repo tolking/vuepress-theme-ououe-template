@@ -63,4 +63,6 @@ export default {
     overflow-x scroll
     .link-logo
       display none
+.cover-header
+  height $s-cover
 </style>

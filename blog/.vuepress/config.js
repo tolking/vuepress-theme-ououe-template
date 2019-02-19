@@ -21,12 +21,18 @@ module.exports = {
       text: 'Posts',
       link: '/posts/'
     }, {
+      text: 'Tag',
+      link: '/tag/'
+    }, {
+      text: 'Works',
+      link: '/works/'
+    }, {
       text: 'About',
       link: '/about.html'
     }],
     footer: [{
-      text: 'Latest Posts',
-      link: '/posts/'
+      text: 'Latest Post',
+      link: 'posts'
     }, {
       text: 'Github',
       link: 'https://github.com/tolking'

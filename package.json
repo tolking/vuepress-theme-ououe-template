@@ -5,16 +5,18 @@
   "author": "tolking <tolking@gmail.com>",
   "scripts": {
     "dev": "vuepress dev blog",
-    "build": "rm -rf dist/ && vuepress build blog --dest dist/"
+    "build": "vuepress build blog --dest dist/"
   },
   "devDependencies": {
     "conventional-changelog-cli": "^2.0.11",
-    "release-it": "^7.6.3"
-  },
-  "dependencies": {
-    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.20",
-    "@vuepress/plugin-blog": "^1.0.0-alpha.0",
-    "@vuepress/plugin-search": "^1.0.0-alpha.0",
-    "vuepress": "^1.0.0-alpha.37"
+    "release-it": "^7.6.3",
+    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.39",
+    "@vuepress/plugin-blog": "^1.0.0-alpha.39",
+    "@vuepress/plugin-nprogress": "^1.0.0-alpha.39",
+    "@vuepress/plugin-last-updated": "^1.0.0-alpha.39",
+    "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.39",
+    "@vuepress/plugin-pagination": "^1.0.0-alpha.39",
+    "@vuepress/plugin-search": "^1.0.0-alpha.39",
+    "vuepress": "^1.0.0-alpha.39"
   }
 }
