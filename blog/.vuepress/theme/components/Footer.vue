@@ -1,10 +1,8 @@
 <template>
   <footer class="footer">
-    <div class="flex-bc main footer-main">
-      <router-link :to="$site.base"
-        class="copyright">{{ $site.title + " &copy; " + year }}</router-link>
-      <nav-link v-if="links" :value="links" class="footer-link"></nav-link>
-    </div>
+    <nav-link v-if="links" :value="links" class="footer-link"></nav-link>
+    <router-link :to="$site.base"
+      class="copyright">{{ $site.title + " &copy; " + year }}</router-link>
   </footer>
 </template>
 
@@ -28,12 +26,12 @@ export default {
 
 <style lang="stylus" scoped>
 .footer
-  height ($s-cover / 4)
-  background $c-black
-  .footer-main
-    padding-top 1rem
-    .copyright
-      font-size .8rem
-      color $c-white
-      font-weight 100
+  position relative
+  z-index 10
+  padding 1rem 0 .5rem
+  background $blackColor
+  text-align center
+  .copyright
+    font-size .7rem
+    color $whiteColor
 </style>

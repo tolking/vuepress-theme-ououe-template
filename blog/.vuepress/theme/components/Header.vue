@@ -39,30 +39,30 @@ export default {
 <style lang="stylus" scoped>
 .header
   position relative
-  height $s-header
+  height $headerHeight
   .header-navbar
     position fixed
     top 0
     left 0
     right 0
     z-index 100
+    background $maskColor
     .header-nav
-      height $s-header
-      background $c-shadow
+      height $headerHeight
       .nav-link
         .link-logo
-          height $s-header
+          height $headerHeight
           .logo-img
             padding 10% 0
             height 60%
       .search-box
         margin-right 1rem
-@media (max-width $s-phone)
+@media (max-width $phoneWidth)
   .nav-link
     white-space nowrap
     overflow-x scroll
     .link-logo
       display none
 .cover-header
-  height $s-cover
+  height $coverHeight
 </style>

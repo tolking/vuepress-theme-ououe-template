@@ -4,7 +4,7 @@
     class="flex-ccc header-cover">
     <h1 class="cover-title">
       <img v-if="logoImg" :src="logoImg" class="title-img"/>
-      <span v-else class="title-text">{{ $site.title }}</span>
+      <span v-else class="title-text">{{ $title }}</span>
     </h1>
     <h2 class="cover-text">{{ $site.description }}</h2>
   </section>
@@ -14,12 +14,12 @@
 export default {
   computed: {
     coverImg() {
-      return this.$site.themeConfig.cover
+      return this.$themeConfig.cover;
     },
     logoImg() {
-      return this.$site.themeConfig.logo
+      return this.$themeConfig.logo;
     }
-  },
+  }
 }
 </script>
 
@@ -37,14 +37,14 @@ export default {
   background-position center
   .cover-title
     .title-img
-      height ($s-cover / 5)
+      height ($coverHeight / 5)
     .title-text
       font-size 2rem
-      color $c-white
+      color $whiteColor
   .cover-text
     font-size 1.2rem
-    color $c-white
-@media (max-width $s-phone)
+    color $whiteColor
+@media (max-width $s-phoneWidth)
   .cover-header
     height 100vh
 </style>

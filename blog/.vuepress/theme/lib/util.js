@@ -6,18 +6,19 @@ export const checkUrl = url => {
 }
 
 /**
+ * 分割地址
+ */
+export const splitUrl = url => url.split('/').filter(item => item);
+
+/**
  * 根据路由分割页面 
  */
 export const splitPages = allPages => {
-  console.log(allPages);
   let pages = {};
-  allPages.reverse().forEach(item => {
-    const { title, path } = item;
-    const arrPath = path.split('/').filter(item => item);
+  allPages.forEach(item => {
+    const path = item.path;
+    const arrPath = splitUrl(path);
     if (arrPath.length > 1 && !arrPath[0].includes('.html')) {
-      console.log(arrPath);
-      item.frontmatter.layout = 'page';
-      
       const key = arrPath[0];
       if (pages[key]) {
         const element = pages[key];
@@ -25,8 +26,6 @@ export const splitPages = allPages => {
       } else {
         pages[key] = [item]
       }
-    } else {
-      item.frontmatter.layout = 'Layout';
     }
   });
   return pages

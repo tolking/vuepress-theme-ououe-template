@@ -1,9 +1,6 @@
 <template>
   <section class="page">
-    <app-header class="cover-header">
-      <header-cover></header-cover>
-    </app-header>
-    <list></list>
+    <app-header></app-header>
     <info></info>
     <app-footer></app-footer>
   </section>
@@ -13,7 +10,6 @@
 import AppHeader from '../components/Header.vue';
 import AppFooter from '../components/Footer.vue';
 import HeaderCover from '../components/HeaderCover.vue';
-import List from '../components/List.vue';
 import Info from '../components/Info.vue';
 
 export default {
@@ -22,7 +18,6 @@ export default {
     AppHeader,
     AppFooter,
     HeaderCover,
-    List,
     Info
   },
   created() {

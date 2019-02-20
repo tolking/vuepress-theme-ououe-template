@@ -1,20 +1,20 @@
 <template>
   <section class="latout">
-    <app-header class="cover-header">
+    <app-header :class="{'cover-header': $themeConfig.cover }">
       <header-cover></header-cover>
     </app-header>
-    <list :item="posts"></list>
+    <list :item="posts" :class="{'cover-list': $themeConfig.cover }"></list>
     <app-footer></app-footer>
   </section>
 </template>
 
 <script>
+import { splitUrl } from '../lib/util.js';
 import AppHeader from '../components/Header.vue';
 import AppFooter from '../components/Footer.vue';
 import HeaderCover from '../components/HeaderCover.vue';
 import List from '../components/List.vue';
 
-import { splitPages } from '../lib/util';
 export default {
   name: 'layout',
   components: {
@@ -25,23 +25,26 @@ export default {
   },
   computed: {
     posts() {
-      return this.$site.pages.filter(item => {
-        if (this.$site.base === this.$page.path) {
-          return item.frontmatter.display === 'home'
-        } else {
-          return item.path.includes(this.$page.path)
-            && item.frontmatter.display !== 'none'
+      if (this.$site.base === this.$page.regularPath) {
+        let _posts = [];
+        for (const key in this.$pages) {
+          const item = this.$pages[key];
+          item.forEach(element => {
+            (element.frontmatter.display === 'home') && _posts.push(element);
+          });
         }
-      })
+        return _posts;
+      } else {
+        const key = splitUrl(this.$page.regularPath)[0];
+        return this.$pages[key];
+      }
     }
   },
   created() {
     // console.log(this);
     console.log(this.$site);
-    // console.log(this.$page);
+    console.log(this.$page);
     // console.log(this.$pagination);
-    
-    // splitPages(this.$site.pages)
   }
 }
 </script>

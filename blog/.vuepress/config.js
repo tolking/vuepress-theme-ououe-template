@@ -6,6 +6,7 @@ module.exports = {
     ['link', { rel: 'icon', href: '/favicon.png' }]
   ],
   markdown: {
+    lineNumbers: true,
     anchor: {
       permalink: false,
       permalinkBefore: false
@@ -20,9 +21,6 @@ module.exports = {
     }, {
       text: 'Posts',
       link: '/posts/'
-    }, {
-      text: 'Tag',
-      link: '/tag/'
     }, {
       text: 'Works',
       link: '/works/'
