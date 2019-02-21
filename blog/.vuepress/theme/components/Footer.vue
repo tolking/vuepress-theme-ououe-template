@@ -32,6 +32,8 @@ export default {
   background $blackColor
   text-align center
   .copyright
+    display inline-block
+    margin-top .55rem
     font-size .7rem
     color $whiteColor
 </style>

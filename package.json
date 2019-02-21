@@ -11,11 +11,9 @@
     "conventional-changelog-cli": "^2.0.11",
     "release-it": "^7.6.3",
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.39",
-    "@vuepress/plugin-blog": "^1.0.0-alpha.39",
     "@vuepress/plugin-nprogress": "^1.0.0-alpha.39",
     "@vuepress/plugin-last-updated": "^1.0.0-alpha.39",
     "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.39",
-    "@vuepress/plugin-pagination": "^1.0.0-alpha.39",
     "@vuepress/plugin-search": "^1.0.0-alpha.39",
     "vuepress": "^1.0.0-alpha.39"
   }

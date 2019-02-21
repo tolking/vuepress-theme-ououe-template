@@ -31,3 +31,16 @@ select
 
 #app
   background $bgColor
+
+@media (max-width $phoneWidth)
+  .search-box
+    margin-right 0
+    input
+      left 0 !important
+      background-color $transColor !important
+      &:focus
+        background-color $whiteColor !important
+
+.global-ui
+  .go-to-top
+    z-index 100

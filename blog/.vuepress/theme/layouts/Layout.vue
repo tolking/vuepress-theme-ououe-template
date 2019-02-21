@@ -3,7 +3,7 @@
     <app-header :class="{'cover-header': $themeConfig.cover }">
       <header-cover></header-cover>
     </app-header>
-    <list :item="posts" :class="{'cover-list': $themeConfig.cover }"></list>
+    <list :item="posts" :class="{'cover-list': $themeConfig.cover, 'home-list': isHome }"></list>
     <app-footer></app-footer>
   </section>
 </template>
@@ -24,8 +24,11 @@ export default {
     List
   },
   computed: {
+    isHome() {
+      return this.$site.base === this.$page.regularPath
+    },
     posts() {
-      if (this.$site.base === this.$page.regularPath) {
+      if (this.isHome) {
         let _posts = [];
         for (const key in this.$pages) {
           const item = this.$pages[key];

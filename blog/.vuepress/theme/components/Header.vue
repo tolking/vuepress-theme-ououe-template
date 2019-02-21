@@ -55,8 +55,6 @@ export default {
           .logo-img
             padding 10% 0
             height 60%
-      .search-box
-        margin-right 1rem
 @media (max-width $phoneWidth)
   .nav-link
     white-space nowrap
