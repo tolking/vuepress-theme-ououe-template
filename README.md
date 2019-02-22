@@ -1,4 +1,6 @@
-# vuepress-theme
+# vuepress-theme-blog-starter
+
+
 
 开发中...
 come soon...
@@ -13,3 +15,6 @@ $ npm run dev
 # build for production
 $ npm run build
 ```
+
+## License
+[MIT](http://opensource.org/licenses/MIT)

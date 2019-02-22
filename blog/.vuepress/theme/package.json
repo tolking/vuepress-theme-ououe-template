@@ -1,16 +1,15 @@
 {
   "name": "vuepress-theme-tolking",
   "version": "1.0.0",
-  "description": "my blog",
   "main": "index.js",
+  "description": "A blog theme for VuePress by tolking",
   "author": "tolking <tolking@gmail.com>",
-  "scripts": {
-    "dev": "vuepress dev blog",
-    "build": "vuepress build blog"
-  },
-  "dependencies": {
-    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.20",
-    "@vuepress/plugin-search": "^1.0.0-alpha.0",
-    "vuepress": "^1.0.0-alpha.37"
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.39",
+    "@vuepress/plugin-nprogress": "^1.0.0-alpha.39",
+    "@vuepress/plugin-last-updated": "^1.0.0-alpha.39",
+    "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.39",
+    "@vuepress/plugin-search": "^1.0.0-alpha.39",
+    "vuepress": "^1.0.0-alpha.39"
   }
 }

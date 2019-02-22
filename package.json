@@ -1,11 +1,13 @@
 {
   "name": "vuepress-blog-theme-test",
   "version": "1.0.0",
-  "description": "my blog",
+  "description": "A starter for VuePress-theme-blog",
   "author": "tolking <tolking@gmail.com>",
   "scripts": {
     "dev": "vuepress dev blog",
-    "build": "vuepress build blog --dest dist/"
+    "build": "vuepress build blog --dest dist/",
+    "build:push": "npm run build && npm run push",
+    "push": "deploy.sh"
   },
   "devDependencies": {
     "conventional-changelog-cli": "^2.0.11",
