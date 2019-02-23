@@ -1,5 +1,5 @@
 ---
-lang: zh-CN
+lang: en-US
 meta:
   - http-equiv: X-UA-Compatible
     content: IE=edge,chrome=1
@@ -8,7 +8,7 @@ meta:
   - name: author
     content: tolking
   - name: description
-    content: 555
+    content: A template for vuepress-theme-ououe
   - name: keywords
-    content: 444
+    content: vuepress, vuepress-theme-ououe, blog, theme
 ---

@@ -1,17 +1,30 @@
 {
-  "name": "vuepress-blog-theme-test",
+  "name": "vuepress-theme-ououe-template",
   "version": "1.0.0",
-  "description": "A starter for VuePress-theme-blog",
+  "description": "A template for vuepress-theme-ououe",
   "author": "tolking <tolking@gmail.com>",
+  "repository": "https://github.com/tolking/vuepress-theme-ououe-template",
+  "bugs": {
+    "url": "https://github.com/tolking/vuepress-theme-ououe-template/issues"
+  },
+  "homepage": "https://github.com/tolking/vuepress-theme-ououe-template",
+  "doc": "https://ououe.com/lib/vuepress-theme-ououe.html",
+  "keywords": [
+    "vue",
+    "vuepress",
+    "theme",
+    "ououe",
+    "blog"
+  ],
   "scripts": {
     "dev": "vuepress dev blog",
     "build": "vuepress build blog --dest dist/",
-    "build:push": "npm run build && npm run push",
     "push": "deploy.sh"
   },
   "devDependencies": {
     "conventional-changelog-cli": "^2.0.11",
     "release-it": "^7.6.3",
+    "vuepress-theme-ououe": "^1.0.0",
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.39",
     "@vuepress/plugin-nprogress": "^1.0.0-alpha.39",
     "@vuepress/plugin-last-updated": "^1.0.0-alpha.39",

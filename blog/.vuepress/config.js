@@ -5,13 +5,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }]
   ],
-  markdown: {
-    lineNumbers: true,
-    anchor: {
-      permalink: false,
-      permalinkBefore: false
-    }
-  },
+  theme: 'ououe',
   themeConfig: {
     cover: '/cover.jpg',
     logo: '/logo.png',
@@ -22,16 +16,10 @@ module.exports = {
       text: 'Posts',
       link: '/posts/'
     }, {
-      text: 'Works',
-      link: '/works/'
-    }, {
       text: 'About',
       link: '/about.html'
     }],
     footer: [{
-      text: 'Latest Post',
-      link: 'posts'
-    }, {
       text: 'Github',
       link: 'https://github.com/tolking'
     }]
