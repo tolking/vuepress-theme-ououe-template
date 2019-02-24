@@ -2,13 +2,15 @@ module.exports = {
   title: 'Theme',
   description: 'theme for Vuepress',
   base: '/',
-  head: [
-    ['link', { rel: 'icon', href: '/favicon.png' }]
-  ],
   theme: 'ououe',
   themeConfig: {
     cover: '/cover.jpg',
     logo: '/logo.png',
+    search: true,
+    postTime: {
+      createTime: 'Create Time',
+      lastUpdated: 'Last Updated'
+    },
     nav: [{
       text: 'Home',
       link: '/'
@@ -17,7 +19,7 @@ module.exports = {
       link: '/posts/'
     }, {
       text: 'About',
-      link: '/about.html'
+      link: '/about/'
     }],
     footer: [{
       text: 'Github',

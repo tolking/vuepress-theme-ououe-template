@@ -1,6 +1,7 @@
 ---
 title: About
 lang: en-US
+layout: Page
 ---
 
 # A blog theme for VuePress
