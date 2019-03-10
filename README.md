@@ -1,37 +1,123 @@
 # vuepress-theme-ououe-template
 
-## Parameters
+## Change Log 1.1.0
+- add tags and categories
+- add pagination
 
+## Structure directores
 ```
++- blog
+  +- .vuepress
+    +- config.js
+  +- posts
+    +- test.md
+    ...
+  +- about
+    +- index.md
+  ...
+```
+
+**You don't need to create a `index.md(or README.md)` file in a folder that needs Pagination**
+
+or set `layout`
+
+``` md
+// about -> index.md
+
 ---
-title: blog
-lang: en-US
 layout: Page
+---
+```
+
+## frontmatter
+
+``` md
+// posts -> test.md
+
+---
+title: How to use
 display: home
 image: ...
 date: 2019-02-22
-meta:
-  - name: description
-    content: description
+tags:
+  - vuepress
+  - vuepress-themt-ououe
+categories: 
+  - blog
 --- 
 ```
 
-The post intro uses the `<!-- more -->` tag
+You need to use `display` to control where the current article is displayed
 
-The post uses `display: home` to show in the home page
+``` md
+// posts -> test.md
 
-**Default layout**
+---
+display: home
+---
+```
 
-index.md -- layout: Layout
+A list of home pages will displayed.
 
-XXX.md -- layout: Page
+``` md
+// posts -> test.md
 
-Use layout to change default
+---
+display: none
+---
+```
 
-...
+It will not be displayed.
+
+However, you can still access it through the right path.
+
+## Other
+
+### [theme config](https://github.com/tolking/vuepress-theme-ououe)
+
+### Partitioning some function into [vuepress-plugin-blog-multidir](https://github.com/tolking/vuepress-plugin-blog-multidir)
+
+You can change the default options.
+
+``` js
+// .vuepress -> config.js
+module.exports = {
+  theme: 'ououe',
+  themeConfig: {
+    // ...
+  },
+  plugins: [
+    ['blog-multidir', {
+      // ...
+    }]
+  ]
+}
+```
+
+[default options](https://github.com/tolking/vuepress-plugin-blog-multidir)
+
+### Change theme
 
 ```
-# install dependencies
++- blog
+  +- .vuepress
+    +- styles
+      +- palette.styl
+      +- index.styl
+```
+
+#### palette.styl
+
+If you wish to apply simple color overrides to the styling of the [default preset](https://github.com/tolking/vuepress-theme-ououe/blob/master/styles/palette.styl) or define some color variables for using later.
+
+#### index.styl
+
+add styles
+
+[Theme Inheritance](https://v1.vuepress.vuejs.org/theme/inheritance.html)
+
+```
+# nstall dependencies
 $ npm install
 
 # serve with hot reload at localhost:8080
@@ -40,6 +126,7 @@ $ npm run dev
 # build for production
 $ npm run build
 ```
+
 
 ## License
 [MIT](http://opensource.org/licenses/MIT)

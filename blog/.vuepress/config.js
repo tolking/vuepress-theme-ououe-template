@@ -2,11 +2,13 @@ module.exports = {
   title: 'Theme',
   description: 'theme for Vuepress',
   base: '/',
+  dest: 'dist/',
   theme: 'ououe',
   themeConfig: {
     cover: '/cover.jpg',
     logo: '/logo.png',
     search: true,
+    pageGroup: 5,
     postTime: {
       createTime: 'Create Time',
       lastUpdated: 'Last Updated'
@@ -17,6 +19,15 @@ module.exports = {
     }, {
       text: 'Posts',
       link: '/posts/'
+    }, {
+      text: 'Doc',
+      link: '/doc/'
+    }, {
+      text: 'Tags',
+      link: '/tag/'
+    }, {
+      text: 'Categories',
+      link: '/category/'
     }, {
       text: 'About',
       link: '/about/'
