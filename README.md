@@ -1,10 +1,7 @@
 # vuepress-theme-ououe-template
 
-## Change Log 1.1.0
-- add tags and categories
-- add pagination
-
 ## Structure directores
+
 ```
 +- blog
   +- .vuepress
@@ -116,14 +113,21 @@ add styles
 
 [Theme Inheritance](https://v1.vuepress.vuejs.org/theme/inheritance.html)
 
-```
-# nstall dependencies
+
+`` bash
+# install dependencies
+$ yarn install
+# or
 $ npm install
 
 # serve with hot reload at localhost:8080
+$ yarn run dev
+# or
 $ npm run dev
 
 # build for production
+$ yarn run build
+# or
 $ npm run build
 ```
 
