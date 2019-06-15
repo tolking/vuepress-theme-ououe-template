@@ -1,5 +1,7 @@
 # vuepress-theme-ououe-template
 
+up to vuepress 1.0.1
+
 ## Structure directores
 
 ```
@@ -121,12 +123,12 @@ $ yarn install
 $ npm install
 
 # serve with hot reload at localhost:8080
-$ yarn run dev
+$ yarn dev
 # or
 $ npm run dev
 
 # build for production
-$ yarn run build
+$ yarn build
 # or
 $ npm run build
 ```

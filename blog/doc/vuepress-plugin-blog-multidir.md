@@ -13,7 +13,7 @@ categories:
 
 > Blog plugin for vuepress
 
-**This plugin is for Vuepress 1.x which is currently in alpha**
+**This plugin is for Vuepress 1.0**
 
 <!-- more -->
 
