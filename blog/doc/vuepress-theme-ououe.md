@@ -1,12 +1,12 @@
 ---
 title: vuepress-theme-ououe
-display: home
-image: https://picsum.photos/1920/1080/?random&date=2019-03-09
-date: 2019-03-09
+lang: en-US
+description: A blog theme for VuePress
+image: https://picsum.photos/1920/1080/?random&date=2019-02-22
+date: 2019-02-22
 tags:
   - vue
   - vuepress
-  - vuepress-theme-ououe
 categories:
   - documentation
 --- 
@@ -19,11 +19,13 @@ categories:
 
 Live Demo: [My Blog](https://ououe.com)
 
-[Documentation](https://ououe.com/lib/vuepress-theme-ououe.html)
-
 Uses [vuepress-theme-ououe-template](https://github.com/tolking/vuepress-theme-ououe-template) to starter
 
 Take [TryGhost/Casper](https://github.com/TryGhost/Casper) as a reference
+
+[Source code](https://github.com/tolking/vuepress-theme-ououe)
+
+---
 
 ## Installation
 
@@ -35,17 +37,35 @@ npm i vuepress-theme-ououe
 
 ## Usage
 
-``` js
+``` js {3}
 // .vuepress -> config.js
 module.exports = {
   theme: 'ououe',
   themeConfig: {
     // ...
+  },
+
+  // When your version is larger than 1.3.0, you need to add the following code to enable dark theme
+  postcss: {
+    plugins: [
+      require('css-prefers-color-scheme/postcss'),
+      require('autoprefixer')
+    ]
   }
 }
 ```
 
 ## Options
+
+### defaultTheme
+- Type: `string`
+- Default: `light`
+
+support `light` or `dark`
+
+based on [css-prefers-color-scheme](https://github.com/csstools/css-prefers-color-scheme/)
+
+you need to add a postcss plugins to your [config file](#Usage)
 
 ### cover
 - Type: `string`, `object`
@@ -61,7 +81,7 @@ cover: {
 }
 ```
 
-Show in the header of the index page
+  Show in the header of the index page
 
 ### logo
 - Type: `string`
@@ -75,7 +95,7 @@ Show in the header of the index page
 - Type: `number`
 - Default: `5`
 
-Number of pages Pagination
+  Number of pages Pagination
 
 ### postTime
 - Type: `object`
@@ -120,6 +140,14 @@ Number of pages Pagination
 // ...
 ```
 
+### useVssue
+- Type: `boolean`
+- Default: `false`
+
+  Use [vssue](https://vssue.js.org/guide/vuepress.html) for comment system
+
+  **You must install it before using it**
+
 ## Structure directores
 ```
 +- blog
@@ -133,7 +161,9 @@ Number of pages Pagination
   ...
 ```
 
+::: tip
 **You don't need to create a `index.md(or README.md)` file in a folder that needs Pagination**
+:::
 
 or set `layout`
 
@@ -189,7 +219,7 @@ However, you can still access it through the right path.
 
 ## Other
 
-###Partitioning some function into [vuepress-plugin-blog-multidir](https://github.com/tolking/vuepress-plugin-blog-multidir)
+### Partitioning some function into [vuepress-plugin-blog-multidir](https://github.com/tolking/vuepress-plugin-blog-multidir)
 
 You can change the default options.
 
@@ -200,11 +230,11 @@ module.exports = {
   themeConfig: {
     // ...
   },
-  plugins: [
-    ['blog-multidir', {
-      // ...
-    }]
-  ]
+  plugins: {
+    'blog-multidir': {
+      //...
+    }
+  }
 }
 ```
 
