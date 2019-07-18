@@ -43,9 +43,32 @@ module.exports = {
   theme: 'ououe',
   themeConfig: {
     // ...
-  },
+  }
+}
+```
 
-  // When your version is larger than 1.3.0, you need to add the following code to enable dark theme
+## Options
+
+### defaultTheme
+- Type: `boolean`, `string`
+- Default: `false`
+
+support `false`, `light` or `dark`
+
+::: tip
+When using `false`, displaying light or dark themes is determined by [browser](https://caniuse.com/#search=prefers-color-scheme)
+
+When using `light` or `dark`, displaying light or dark themes is determined by defaultTheme
+::: right
+based on [css-prefers-color-scheme](https://github.com/csstools/css-prefers-color-scheme/)
+:::
+
+**When using `light` or `dark`, you need to add a postcss plugins to your config.js**
+
+``` js {6}
+// .vuepress -> config.js
+module.exports = {
+  // ...
   postcss: {
     plugins: [
       require('css-prefers-color-scheme/postcss'),
@@ -54,18 +77,6 @@ module.exports = {
   }
 }
 ```
-
-## Options
-
-### defaultTheme
-- Type: `string`
-- Default: `light`
-
-support `light` or `dark`
-
-based on [css-prefers-color-scheme](https://github.com/csstools/css-prefers-color-scheme/)
-
-you need to add a postcss plugins to your [config file](#Usage)
 
 ### cover
 - Type: `string`, `object`
@@ -161,7 +172,7 @@ cover: {
   ...
 ```
 
-::: tip
+::: tip TIP
 **You don't need to create a `index.md(or README.md)` file in a folder that needs Pagination**
 :::
 
@@ -266,4 +277,4 @@ add styles
 
 ## Keywords
 
-vue vuepress theme ououe blog Ghost Casper
+vue vuepress blog blog-theme vuepress-theme light-theme dark-theme

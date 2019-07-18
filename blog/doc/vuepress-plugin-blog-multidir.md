@@ -1,23 +1,21 @@
 ---
 title: vuepress-plugin-blog-multidir
-display: home
+lang: en-US
+description: Build your blog through multiple folders for vuepress
 image: https://picsum.photos/1920/1080/?random&date=2019-03-09
 date: 2019-03-09
 tags:
   - vue
   - vuepress
-  - vuepress-plugin-blog-multidir
 categories:
   - documentation
 --- 
 
-> Blog plugin for vuepress
+> Build your blog through multiple folders
 
 **This plugin is for Vuepress 1.0**
 
 <!-- more -->
-
-The [@vuepress/plugin-blog](https://github.com/vuejs/vuepress/tree/master/packages/%40vuepress/plugin-blog) only supports one folder, but I want more.
 
 ## Installation
 
@@ -29,7 +27,7 @@ npm i vuepress-plugin-blog-multidir
 
 ## Usage
 
-``` js
+``` js {3}
 module.exports = {
   plugins: [
     'blog-multidir'
@@ -46,9 +44,7 @@ module.exports = {
 - Type: `string`
 - default: `:root`
 
-**Can't have the same name as your folder.**
-
-For internal use only.
+  **Can't have the same name as your folder**  (For internal use only).
 
 ### categoryIndexPageUrl
 - Type: `string`
@@ -74,7 +70,7 @@ For internal use only.
 - Type: `string`, `array`, `Object`
 - Default: `posts`
 
-Configures the permalink generated for you folder.
+  **Configures the permalink generated for you folder.**
 
 example
 ``` js
@@ -84,8 +80,7 @@ postsDir = ['posts1', 'posts2', 'posts3']
 // or { path: permalink }
 postsDir = {
   posts1: ':year',
-  posts2: ':month',
-  posts3: ':slug'
+  posts2: ':month'
 }
 ```
 
@@ -93,7 +88,7 @@ postsDir = {
 - Type: `string`, `boolean(false)`
 - Default: `false`
 
-See [Permalinks](https://v1.vuepress.vuejs.org/guide/permalinks.html#template-variables) for a list of valid variables.
+  See [Permalinks](https://v1.vuepress.vuejs.org/guide/permalinks.html#template-variables) for a list of valid variables.
 
 ### postsSorter
 - Type: `function`
@@ -110,26 +105,48 @@ See [Permalinks](https://v1.vuepress.vuejs.org/guide/permalinks.html#template-va
 - Type: `boolean`, `string`, `array`
 - Default: `true`
 
+example
+``` js
+{
+  paginationDir: true // Enable all paging
+  // or
+  paginationDir: false // Cancel all pages
+  // or
+  paginationDir: 'posts' // Enable single paging for `posts` folder
+  // or
+  paginationDir: ['posts1', 'posts2'] // Enable multiple paging
+}
+```
+
 ### paginationLimit
 - Type: `number`
 - Default: `12`
 
 ### paginatioPath
 - Type: `string`
-- Default: `/page/`
+- Default: `page/`
 
 ## computed
 
 ### $pluginConfig
 
+  Plugin config information
+
 ### $tags
+
+  Page information sorted by tags
 
 ### $categories
 
+  Page information sorted by categories
+
 ### $lists
+
+  Page information sorted by folders
 
 ### $list
 
+  If you are in the pagination page. you can get
 ``` js
 {
   pageKeys,
@@ -139,11 +156,23 @@ See [Permalinks](https://v1.vuepress.vuejs.org/guide/permalinks.html#template-va
 }
 ```
 
-Here's the paging list data you need.
+  or If you are in the post page. you can get
+``` js
+{
+  index,
+  total,
+  dir,
+  lastPost,
+  nextPost
+}
+```
+  from `this.$list`
 
 ## attention
 
+::: tip TIP
 **You don't need to create a `index.md(or README.md)` file in a folder that needs Pagination**
+:::
 
 ```
 +- blog
@@ -165,6 +194,8 @@ layout: Page
 ---
 ```
 
+---
+
 You need to use `display` to control where the current article is displayed
 
 ``` md
@@ -175,7 +206,7 @@ display: home
 ---
 ```
 
-A list of home pages will displayed。
+A list of home pages will displayed.
 
 ``` md
 // posts -> test.md
@@ -188,6 +219,10 @@ display: none
 It will not be displayed.
 
 However, you can still access it through the right path.
+
+---
+
+If you are in the pagination page. you can get the current page by `this.$route.meta.current`.
 
 ## License
 
