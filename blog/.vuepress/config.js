@@ -31,5 +31,27 @@ module.exports = {
       require('css-prefers-color-scheme/postcss'),
       require('autoprefixer')
     ]
-  }
+  },
+  plugins: [
+    // add vuepress-plugin-container
+    ['container', {
+      type: 'right',
+      defaultTitle: ''
+    }],
+    ['container', {
+      type: 'tip',
+      before: info => `<div class="tip"><p class="title">${info}</p>`,
+      after: '</div>'
+    }],
+    ['container', {
+      type: 'warning',
+      before: info => `<div class="warning"><p class="title">${info}</p>`,
+      after: '</div>'
+    }],
+    ['container', {
+      type: 'danger',
+      before: info => `<div class="danger"><p class="title">${info}</p>`,
+      after: '</div>'
+    }]
+  ]
 }
