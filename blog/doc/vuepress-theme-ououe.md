@@ -1,6 +1,7 @@
 ---
 title: vuepress-theme-ououe
 lang: en-US
+display: home
 description: A blog theme for VuePress
 image: https://picsum.photos/1920/1080/?random&date=2019-02-22
 date: 2019-02-22
@@ -101,6 +102,12 @@ cover: {
 ### search
 - Type: `boolean`
 - Default: `true`
+
+### backgroundImage
+- Type: `boolean`
+- Default: `true`
+
+background image on posts pages
 
 ### pageGroup
 - Type: `number`

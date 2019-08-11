@@ -1,7 +1,5 @@
 # vuepress-theme-ououe-template
 
-up to vuepress 1.3.3
-
 ## Structure directores
 
 ```

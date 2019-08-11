@@ -5,7 +5,7 @@ module.exports = {
   dest: 'dist/',
   theme: 'ououe',
   themeConfig: {
-    defaultTheme: 'dark',
+    // defaultTheme: 'dark',
     cover: '/cover.jpg',
     logo: '/logo.png',
     search: true,
@@ -26,12 +26,12 @@ module.exports = {
       { text: 'Github', link: 'https://github.com/tolking' }
     ]
   },
-  postcss: {
-    plugins: [
-      require('css-prefers-color-scheme/postcss'),
-      require('autoprefixer')
-    ]
-  },
+  // postcss: {
+  //   plugins: [
+  //     require('css-prefers-color-scheme/postcss'),
+  //     require('autoprefixer')
+  //   ]
+  // },
   plugins: [
     // add vuepress-plugin-container
     ['container', {
