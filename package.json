@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-ououe-template",
-  "version": "1.3.5",
+  "version": "1.4.1",
   "description": "A template for vuepress-theme-ououe",
   "author": "tolking <tolking@gmail.com>",
   "repository": "https://github.com/tolking/vuepress-theme-ououe-template",
@@ -22,8 +22,8 @@
     "push": "deploy.sh"
   },
   "dependencies": {
-    "vuepress": "^1.0.1",
-    "vuepress-plugin-container": "^2.0.2",
-    "vuepress-theme-ououe": "^1.3.5"
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-container": "^2.1.1",
+    "vuepress-theme-ououe": "^1.4.1"
   }
 }

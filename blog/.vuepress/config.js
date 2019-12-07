@@ -5,19 +5,12 @@ module.exports = {
   dest: 'dist/',
   theme: 'ououe',
   themeConfig: {
-    // defaultTheme: 'dark',
     cover: '/cover.jpg',
     logo: '/logo.png',
-    search: true,
-    pageGroup: 5,
-    postTime: {
-      createTime: 'Create Time',
-      lastUpdated: 'Last Updated'
-    },
+    backgroundImage: false,
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Posts', link: '/posts/' },
-      { text: 'Doc', link: '/doc/' },
       { text: 'Tags', link: '/tag/' },
       { text: 'Categories', link: '/category/' },
       { text: 'About', link: '/about/' }
@@ -26,13 +19,13 @@ module.exports = {
       { text: 'Github', link: 'https://github.com/tolking' }
     ]
   },
-  // postcss: {
-  //   plugins: [
-  //     require('css-prefers-color-scheme/postcss'),
-  //     require('autoprefixer')
-  //   ]
-  // },
   plugins: [
+    // permalink for posts
+    ['blog-multidir', {
+      postsDir: {
+        posts: 'posts/:year/:month/:day/:slug'
+      }
+    }],
     // add vuepress-plugin-container
     ['container', {
       type: 'right',
